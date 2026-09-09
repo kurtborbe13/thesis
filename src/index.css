@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@keyframes arcose-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe\:animate-\[arcose-float_4s_ease-in-out_infinite\] {
+    animation: none;
+  }
+}
