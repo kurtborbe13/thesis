@@ -8,9 +8,14 @@ function App() {
 
   return (
     <>
-      <Home />
-      <AIAssistant isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
-      {!isChatOpen && <AIAssistantButton onClick={() => setIsChatOpen(true)} />}
+      <Home onOpenChat={() => setIsChatOpen(true)} />
+      <AIAssistant
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
+      {!isChatOpen && (
+        <AIAssistantButton onClick={() => setIsChatOpen(true)} />
+      )}
     </>
   )
 }

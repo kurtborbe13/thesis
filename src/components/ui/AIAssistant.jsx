@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+import arcoseLogo from '../../assets/images/arcose-logo-croppedd.png'
+
 
 const initialMessages = [
   {
     id: 'welcome',
     role: 'assistant',
-    content: "Hi! I'm Arcose's AI Assistant.\n\nI can help you learn about Arcose's services, answer construction-related inquiries, and provide preliminary cost estimates based on available information.\n\nIf your inquiry requires further assistance from the Arcose team, I can help forward it to our staff.",
+    content: "Hi! I'm Arcose's AI Assistant.\n\nI can help you learn about Arcose's services, answer construction-related inquiries, and provide preliminary cost estimates based on available information.",
   },
 ]
 
@@ -64,9 +66,14 @@ function AIAssistant({ isOpen, onClose }) {
     >
       <header className="flex items-center justify-between border-b border-[#ECEBE7] bg-white px-5 py-4">
         <div className="flex items-center gap-3">
-          <span className="flex size-10 items-center justify-center rounded-xl bg-[#8F1823] text-sm font-black text-[#F8F7F3]" aria-hidden="true">
-            A
-          </span>
+          <div className="flex size-10 items-center justify-center rounded-xl bg-[#8F1823]">
+  <img
+    className="size-7 object-contain"
+    src={arcoseLogo}
+    alt=""
+    aria-hidden="true"
+  />
+</div>
           <div>
             <h2 id="arcose-ai-title" className="text-sm font-bold text-[#181818]">Arcose AI Assistant</h2>
             <p className="mt-0.5 flex items-center gap-1.5 text-xs font-medium text-[#8F1823]">

@@ -16,3 +16,43 @@
     animation: none;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+button,
+a {
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+button:active,
+a:active {
+  transform: scale(0.98);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #8F1823;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .group:hover {
+    transform: none !important;
+  }
+
+  .group:hover img {
+    transform: none !important;
+  }
+
+  .group:hover span {
+    transform: none !important;
+  }
+}
